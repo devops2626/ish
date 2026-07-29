@@ -238,7 +238,7 @@ static void receive_signal(struct sighand *sighand, struct siginfo_ *info) {
     struct sigaction_ *action = &sighand->action[info->sig];
     bool need_siginfo = action->flags & SA_SIGINFO_;
 
-    // setup the frame
+    // Set up the frame
     union {
         struct sigframe_ sigframe;
         struct rt_sigframe_ rt_sigframe;
