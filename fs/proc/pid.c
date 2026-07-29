@@ -109,13 +109,13 @@ static int proc_pid_statm_show(struct proc_entry *entry, struct proc_data *buf) 
     if (task == NULL)
         return _ESRCH;
 
-    proc_printf(buf, "%lu ", 0); // total vm size
-    proc_printf(buf, "%lu ", 0); // vm resident size
-    proc_printf(buf, "%lu ", 0); // resident shared
-    proc_printf(buf, "%lu ", 0); // text
-    proc_printf(buf, "%lu ", 0); // lib (always 0 since linux 2.6)
-    proc_printf(buf, "%lu ", 0); // data + stack
-    proc_printf(buf, "%lu ", 0); // dirty (always 0 since linux 2.6)
+    proc_printf(buf, "%lu ", 0UL); // total vm size
+    proc_printf(buf, "%lu ", 0UL); // vm resident size
+    proc_printf(buf, "%lu ", 0UL); // resident shared
+    proc_printf(buf, "%lu ", 0UL); // text
+    proc_printf(buf, "%lu ", 0UL); // lib (always 0 since linux 2.6)
+    proc_printf(buf, "%lu ", 0UL); // data + stack
+    proc_printf(buf, "%lu ", 0UL); // dirty (always 0 since linux 2.6)
     proc_printf(buf, "\n");
 
     proc_put_task(task);
