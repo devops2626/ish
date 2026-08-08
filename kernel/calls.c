@@ -338,7 +338,7 @@ void dump_maps(void) {
         size_t chunk_size = buf.size;
         if (chunk_size > 1024)
             chunk_size = 1024;
-        printk("%.*s", chunk_size, buf.data);
+        printk("%.*s", (int) chunk_size, buf.data);
         buf.data += chunk_size;
         buf.size -= chunk_size;
     }
