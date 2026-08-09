@@ -2,6 +2,9 @@ name: Auto-Label
 on:
   issues:
     types: [opened]
+permissions:
+  contents: read
+  issues: write
 jobs:
   label:
     runs-on: ubuntu-latest
